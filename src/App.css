@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+button:disabled {
+  cursor: not-allowed !important;
+  filter: brightness(0.8);
+}
+
+.App {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+  .App {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+}

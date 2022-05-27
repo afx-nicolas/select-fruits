@@ -1,0 +1,146 @@
+.MainForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #c1c1c1;
+  border-radius: 0.625rem;
+  background-color: #fff;
+  padding: 1rem 0.75rem;
+}
+
+.MainForm h1 {
+  margin-bottom: 3.75rem;
+  text-align: center;
+}
+
+.MainForm .FruitSelect-wrapper {
+  width: min(100%, 600px);
+}
+
+.MainForm .FruitSelect {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.actions,
+.SelectedFruit {
+  display: flex;
+  width: 100%;
+  gap: 1.5rem;
+}
+
+select#fruits,
+select.fruit {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #c1c1c1;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+}
+
+.actions button#add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background-color: #6da2f2;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  padding: 1.5rem;
+  border-radius: 50%;
+  transition: filter 0.3s;
+}
+
+.actions button#add:focus {
+  outline-color: #6da2f2;
+}
+
+.actions button#add:hover:not(:disabled) {
+  filter: brightness(1.15);
+}
+
+#SendFruitsToBag {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  background-color: #984bd6;
+  border: none;
+  border-radius: 999px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: medium;
+  margin-top: 4rem;
+  padding: 0.75rem 1.5rem;
+  transition: filter 0.3s;
+}
+
+#SendFruitsToBag:focus {
+  outline-color: #984bd6;
+}
+
+#SendFruitsToBag:hover:not(:disabled) {
+  filter: brightness(1.15);
+}
+
+.SelectedFruits {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.SelectedFruits .SelectedFruit select:disabled {
+  color: #000;
+}
+
+.SelectedFruit .remove {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background-color: transparent;
+  border: 1px solid #e52020;
+  color: #e52020;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  padding: 1.5rem;
+  border-radius: 50%;
+  transform: rotateZ(45deg);
+  transition: filter 0.3s;
+  transition-property: background-color, color;
+  transition-duration: 0.3s;
+}
+
+.SelectedFruit .remove:focus {
+  outline-color: #e52020;
+}
+
+.SelectedFruit .remove:hover {
+  background-color: #e52020;
+  color: #fff;
+}
+
+@media screen and (max-width: 450px) {
+  .MainForm h1 {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .MainForm h1 {
+    font-size: 1.35rem;
+  }
+}
